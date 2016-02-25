@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"  android:stretchColumns="*" >
+    <TableRow
+        android:id="@+id/MainHeaderRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/NameList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="Name"
+            android:textColor="#000000"
+            android:layout_column="0"
+            android:padding="8dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/SensorList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:hint="Sensor #"
+            android:layout_column="1"
+            android:padding="4dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/HeartRateList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:hint="Heart Rate"
+            android:layout_column="1"
+            android:padding="4dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/RespRateList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:hint="Resp Rate"
+            android:layout_column="1"
+            android:padding="4dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/TempList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:hint="Temp."
+            android:layout_column="1"
+            android:padding="4dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/OxSatList"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:hint="Oxygen Sat."
+            android:layout_column="1"
+            android:padding="4dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical" />
+    </TableRow>
+    <!--<TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infName"
+        android:hint="Name"
+        android:focusable="true"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+
+
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infSensor"
+        android:hint="Sensor #"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infHeartRate"
+        android:hint="Heart Rate"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infRespRate"
+        android:hint="Resp Rate"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infTemp"
+        android:hint="Temp"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infOxSat"
+        android:hint="Oxygen Sat"
+        android:layout_weight="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnWeight="1" />
+    </TableRow>-->
+</TableLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NeoVate-v5</string>
+    <string-array name="subcats">
+        <item >subcat1</item>
+    <item >subcat2</item>
+        <item >subcat3</item>
+
+    </string-array>
+    <string name="name_header">Names</string>
+</resources>

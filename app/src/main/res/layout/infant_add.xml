@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:id="@+id/InfantAddTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:stretchColumns="*" >
+        <TableRow
+            android:id="@+id/InfantHistoryRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/InfantHistoryLogo"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/neovatelogo"
+                android:layout_gravity="center"
+                android:layout_span="4" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/MainHeaderRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Name:"
+                android:id="@+id/textView"
+                android:layout_gravity="center_vertical|right"
+                android:layout_column="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/infantName"
+                android:hint="Infant Name"
+                android:maxHeight="1dp"
+                android:maxLines="1"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical|left" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sensor Number:"
+                android:id="@+id/textView2"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical|right" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/sensorNum"
+                android:hint="Sensor Number"
+                android:maxHeight="1dp"
+                android:maxLines="1"
+                android:layout_column="2"
+                android:layout_gravity="center_vertical|left"
+                android:numeric="integer" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Date of Birth (Day/Month/Year):"
+                android:id="@+id/textView3"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical|right" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/InfantAddDay"
+
+                android:hint="Day"
+                android:maxLines="1"
+
+                android:layout_gravity="center_vertical|left"
+                android:numeric="integer"
+                android:maxLength="2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/InfantAddMonth"
+                android:hint="Month"
+                android:maxLines="1"
+
+                android:layout_gravity="center_vertical|left"
+                android:numeric="integer"
+                android:maxLength="2" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/InfantAddYear"
+                android:hint="Year"
+                android:maxLines="1"
+
+                android:layout_gravity="center_vertical|left"
+                android:numeric="integer"
+                android:maxLength="4" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/MainHeaderRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/infantSave"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:onClick="newInfant"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

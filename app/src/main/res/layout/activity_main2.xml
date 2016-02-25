@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:id="@+id/tblTop10List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/MainHeaderRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+            <Button
+                android:id="@+id/buttonAddInfant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="interact"
+                android:padding="8dp"
+                android:text="Add Infant"
+                android:textColor="#000000"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/datainc"
+                android:layout_column="1"
+                android:layout_span="4" />
+
+            <Button
+                android:id="@+id/arduino_connect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Arduino Connect"
+                android:textColor="#000000"
+                android:layout_column="5" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/MainHeaderRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/NameHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#000000"
+                android:layout_column="0"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/SensorHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Sensor #"
+                android:layout_column="1"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/HeartRateHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Heart Rate"
+                android:layout_column="1"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/RespRateHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Resp Rate"
+                android:layout_column="1"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/TempHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Temp."
+                android:layout_column="1"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/OxSatHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Oxygen Sat."
+                android:layout_column="1"
+                android:padding="4dp"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/MainHeaderRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView1"
+                android:layout_span="6"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

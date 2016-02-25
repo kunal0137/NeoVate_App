@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:id="@+id/InfantHistoryTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:stretchColumns="*">
+
+
+        <TableRow
+        android:id="@+id/InfantHistoryRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <ImageView
+            android:id="@+id/InfantHistoryLogo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_span="4"
+            android:src="@mipmap/neovatelogo" />
+    </TableRow>
+        <TableRow
+        android:id="@+id/InfantHistoryRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/InfantHistoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/InfantHistoryDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Date of Birth"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/InfantHistoryRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/InfantHistoryPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Position"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0" />
+
+            <TextView
+                android:id="@+id/InfantHistorySensorNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sensor Number"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/InfantHistoryRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/InfantHistoryRespRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Respiratory Rate"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:id="@+id/InfantHistoryHeartRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Heart Rate"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/InfantHistoryRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/InfantHistoryOxSat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Oxygen Saturation"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:id="@+id/InfantHistoryTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Temperature"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1" />
+
+        </TableRow>
+
+
+        <!--  <TableRow
+              android:id="@+id/MainHeaderRow2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="1" >
+
+              <TextView
+                  android:id="@+id/NameHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:text="Name"
+                  android:textColor="#000000"
+                  android:layout_column="0"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/SensorHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textColor="#000000"
+                  android:text="Sensor #"
+                  android:layout_column="1"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+              <TextView
+                  android:id="@+id/HeartRateHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textColor="#000000"
+                  android:text="Heart Rate"
+                  android:layout_column="1"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+              <TextView
+                  android:id="@+id/RespRateHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textColor="#000000"
+                  android:text="Resp Rate"
+                  android:layout_column="1"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+              <TextView
+                  android:id="@+id/TempHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textColor="#000000"
+                  android:text="Temp."
+                  android:layout_column="1"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+              <TextView
+                  android:id="@+id/OxSatHeader"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textColor="#000000"
+                  android:text="Oxygen Sat."
+                  android:layout_column="1"
+                  android:padding="4dp"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />-->
+
+</TableLayout>
+
+</LinearLayout>
+
+
