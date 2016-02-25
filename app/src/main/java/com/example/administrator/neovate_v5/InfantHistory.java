@@ -27,9 +27,13 @@ public class InfantHistory extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setting the screen to infant_history.xml
         setContentView(R.layout.infant_history);
+        //listening for any intent
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
+
+        //matching the screen with variables used in teh class. so idenfying textboxes
         textPosition = (TextView) findViewById(R.id.InfantHistoryPosition);
         textName = (TextView) findViewById(R.id.InfantHistoryName);
         textDOB = (TextView) findViewById(R.id.InfantHistoryDOB);
@@ -44,6 +48,7 @@ public class InfantHistory extends Activity{
 
         if(b!=null)
         {
+            //get that specific inftant from the infant list
             int pos = (int) b.get("position");
             textPosition.setText("Array Position" + String.valueOf(pos));
             ArrayList<Infant> specInfantList = InfantList.getList();
@@ -62,6 +67,8 @@ public class InfantHistory extends Activity{
             } catch (ParseException e) {
                 e.printStackTrace();
             }*/
+
+            //save all the data from that specific infant
             String stringName = "Infant Name: " + specInfant.name;
             String stringDOB = "Date of Birth: " + specInfant.datebirth;
             String stringSensorNumber = "Sensor Number: " + (String.valueOf(specInfant.sensornum));
@@ -70,6 +77,8 @@ public class InfantHistory extends Activity{
             String stringTemp = "Temperature: " + (String.valueOf(specInfant.temp.get(specInfant.temp.size()-1)));
             String stringOxSat = "Oxygen Saturation " + (String.valueOf(specInfant.oxsat.get(specInfant.oxsat.size()-1)));
 
+
+            //set teh screen values to the new values we just saved from that specific infant
             textName.setText(stringName);
             textDOB.setText(stringDOB);
             textSensorNumber.setText(stringSensorNumber);

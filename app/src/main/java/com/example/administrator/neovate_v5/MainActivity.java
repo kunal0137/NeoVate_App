@@ -41,15 +41,18 @@ public class MainActivity extends Activity {
     //ArrayAdapter<String> adapter;
 
     @Override
-    //sets up the listview
+//App starts here
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //This is the screen that is displayed on the tablet
         setContentView(R.layout.activity_main2);
 
         //Intent j = new Intent(this, InfantList.class);
         //startActivity(j);
 
-        Intent i = new Intent(this, UsbServiceOp.class);
+
+        //Starts the connection to the arduino
+        Intent i = new Intent(MainActivity.this, UsbServiceOp.class);
         startService(i);
 
         myReceiver = new MyReceiver();
@@ -115,8 +118,10 @@ public class MainActivity extends Activity {
 //        ar.add(s1);
 //        ar.add(s2);
 //        ar.add(s3)
-        ArrayList<Infant> screenlist = InfantList.getList();
 
+        //Getting the list, copying it to a differnt list to be displayed
+        ArrayList<Infant> screenlist = InfantList.getList();
+        //Filling the plain list with the custom layout.. i.e. using cutom_infant_listview.xml
         InfantAdapter myadapter = new InfantAdapter(this, screenlist);
 
         //  listView = (ListView) findViewById(android.R.id.list);
@@ -143,6 +148,7 @@ public class MainActivity extends Activity {
 
     }
 
+    //dead method, but leave
     public void updatelist() {
         runOnUiThread(new Runnable() {
             public void run() {
@@ -170,10 +176,12 @@ public class MainActivity extends Activity {
         @Override
         public void onReceive(Context arg0, Intent arg1) {
             // TODO Auto-generated method stub
+            //below line is probably dead
             TextView setter = (TextView) findViewById(R.id.datainc);
             //setter.setText(" ");
             final TextView ftv = setter;
 
+            //This gets teh string associated with teh broadcast you just recieved
             String newData = arg1.getStringExtra("DATAPASSED");
             final String newDatafinal = newData;
             /*runOnUiThread(new Runnable() {
@@ -184,8 +192,10 @@ public class MainActivity extends Activity {
                     ftv.append(newDatafinal);
                 }
             });*/
+            //Figure out how long the new string is
             int stringlength = newData.length();
             String stringlengthtext = ""+stringlength;
+            //This toast shows the length of the newest broadcast recieved
             Toast.makeText(MainActivity.this, stringlengthtext, Toast.LENGTH_SHORT).show();
 
           //  Toast.makeText(MainActivity.this, "Triggered by Service!\n" + "Data passed: " + newData, Toast.LENGTH_SHORT).show();
@@ -195,6 +205,7 @@ public class MainActivity extends Activity {
             //setter.setText(" ");
             String parsing =  Arrays.toString(update);
             final String parsed = parsing;
+            //showing the new data on teh screen
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -233,6 +244,7 @@ public class MainActivity extends Activity {
 
 
         //allows for interactions with different activities
+    //it should change to the arudno connect button
     public void interact(View view) {
         String button_text;
         button_text = ((Button) view).getText().toString();

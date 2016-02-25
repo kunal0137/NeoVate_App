@@ -154,6 +154,7 @@ public class UsbServiceOp extends Service {
         return null;
     }
 
+    //middle man to concat the string, parse a little, and send to activites
     private void stringSend(String toSend) {
 
         datatemp=datatemp.concat(toSend);

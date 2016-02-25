@@ -58,7 +58,7 @@ public class InfantAdapter extends ArrayAdapter<Infant> {
 
     }
 
-
+//Dead code below. Leave it for now
     public void updateScreenList(ArrayList<Infant> newlist) {
         users.clear();
         users.addAll(newlist);
