@@ -52,6 +52,7 @@ public class UsbConnect extends Activity{
 
         }
     };
+    //swag
     private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() { //Broadcast Receiver to automatically start and stop the Serial connection.
         @Override
         public void onReceive(Context context, Intent intent) {
